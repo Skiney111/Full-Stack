@@ -13,7 +13,7 @@ const StatisticLine = ({ text, value }) => (
   </tr>
 )
 
-// Oblicza i wyświetla statystyki opinii
+// Oblicza i wyświetla statystyki opinii    
 const Statistics = ({ good, neutral, bad }) => {
   const total = good + neutral + bad
   
