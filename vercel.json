@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "part3/src/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "part3/vite.config.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "part3/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "part3/src/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "part3/dist/$1",
+      "methods": ["GET", "HEAD"]
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "NODE_ENV": "production",
+    "PORT": "3001"
+  }
+}

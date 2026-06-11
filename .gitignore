@@ -1,0 +1,15 @@
+# Node.js / Vite / React
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+.vscode/
+# Windows
+Thumbs.db
+# Mac
+__MACOSX/
+# Others
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

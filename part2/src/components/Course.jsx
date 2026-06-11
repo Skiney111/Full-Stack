@@ -14,7 +14,6 @@ const Part = ({ name, exercises }) => (
   </p>
 )
 
-// Sumuje ćwiczenia ze wszystkich części - używając reduce
 const Total = ({ parts }) => {
   const total = parts.reduce((sum, part) => sum + part.exercises, 0)
   return <p><strong>Number of exercises {total}</strong></p>
