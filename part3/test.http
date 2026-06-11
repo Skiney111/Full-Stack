@@ -1,0 +1,74 @@
+### EXERCISE 3.1: GET ALL PERSONS
+GET http://localhost:3001/api/persons
+
+###
+
+### EXERCISE 3.2: INFO PAGE
+GET http://localhost:3001/info
+
+###
+
+### EXERCISE 3.3: GET SINGLE PERSON (ID=2)
+GET http://localhost:3001/api/persons/2
+
+###
+
+### EXERCISE 3.3: GET SINGLE PERSON - NOT FOUND (ID=999)
+GET http://localhost:3001/api/persons/999
+
+###
+
+### EXERCISE 3.5 & 3.6: CREATE NEW PERSON - SUCCESS
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Jan Nowak",
+  "number": "555-666-7777"
+}
+
+###
+
+### EXERCISE 3.6: ERROR - MISSING NUMBER
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Maria Kowalska"
+}
+
+###
+
+### EXERCISE 3.6: ERROR - MISSING NAME
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "111-222-3333"
+}
+
+###
+
+### EXERCISE 3.6: ERROR - DUPLICATE NAME
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "999-999-9999"
+}
+
+###
+
+### EXERCISE 3.4: DELETE PERSON (ID=4)
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+### VERIFY DELETION - GET PERSON (ID=4)
+GET http://localhost:3001/api/persons/4
+
+###
+
+### ROOT ENDPOINT
+GET http://localhost:3001/
